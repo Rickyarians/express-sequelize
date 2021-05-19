@@ -21,7 +21,23 @@ module.exports = {
             {
               type: Sequelize.STRING,
               allowNull: false
-            },    
+            },  
+        // email: {
+        //      type: Sequelize.STRING(100),
+        //      allowNull: false
+        // },
+        // refresh_token: {
+        //   type: Sequelize.TEXT,
+        //   allowNull: false
+        // }, 
+        // access_token: {
+        //   type: Sequelize.TEXT,
+        //   allowNull: false
+        // },
+        // is_subscribed: {
+        //   type: Sequelize.BOOLEAN,
+        //   allowNull: false
+        // }
       }
     );
      

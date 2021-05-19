@@ -15,9 +15,14 @@ module.exports = {
           type: Sequelize.STRING(50),
           allowNull: false
         },
+      // type: 
+      //   {
+      //     type: Sequelize.ENUM,
+      //     values: ['FREE', 'BASIC', 'PREMIUM'],
+      //   },
     description: 
         {
-          type: Sequelize.STRING,
+          type: Sequelize.TEXT,
           allowNull: false
         },
    user_id: 
