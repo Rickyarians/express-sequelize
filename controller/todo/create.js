@@ -5,17 +5,18 @@ module.exports = async(req, res, next) => {
     try{
     
     // tangkep dulu inputan, diantaranya name, description, user_id
-    const {name, description, user_id} = req.body
-    console.log(name)
-    console.log(description)
-    console.log(user_id)
+    const {user} = req
+    const {name, description} = req.body
+    // console.log(name)
+    // console.log(description)
+    // console.log(user_id)
 
 
     // kita akan masukkin datanya, dengan memanggil model
     const Todo = await todo.create({
         name,
         description,
-        user_id
+        user_id : user.id
     }) 
 
     console.log(Todo)

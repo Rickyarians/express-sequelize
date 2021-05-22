@@ -5,7 +5,8 @@ module.exports = async(req, res, next) => {
     try{
         
     // tangkep data, diantaranya id_todo, name, description, user_id
-    const {id_todo, name, description, user_id, dataarray} = req.body
+    const {user} = req
+    const {id_todo, name, description} = req.body
     // console.log(id_todo)
     // console.log(name)
     // console.log(description)
@@ -40,7 +41,7 @@ module.exports = async(req, res, next) => {
     const updateTodo = await todo.update({
         name,
         description,
-        user_id
+        user_id : user.id
     }, {
         where: {
             id: id_todo
